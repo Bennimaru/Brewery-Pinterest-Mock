@@ -1,0 +1,10 @@
+.Breweries{
+  width: 30%
+}
+.Boards{
+  width: 60%
+}
+
+.App{
+  display: flex
+}
