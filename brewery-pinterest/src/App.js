@@ -10,8 +10,10 @@ class App extends Component {
     boards:[]
   }
 
-  handleSubmit= boardInfo =>{
-    console.log(boardInfo.name);
+  handleSubmit= boardInfo => {
+    this.setState({
+      boards:[...this.state.boards,boardInfo]
+    })
   }
 
   componentDidMount(){

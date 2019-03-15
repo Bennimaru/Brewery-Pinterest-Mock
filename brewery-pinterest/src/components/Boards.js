@@ -9,8 +9,7 @@ class Boards extends Component{
 
   handleSubmit= event =>{
     event.preventDefault()
-    console.log("hi");
-    this.props.handleSubmit(this.state)
+    this.props.handleSubmit(<BoardCard key={this.state.name} name= {this.state.name}/>)
     this.setState(
       {name:""}
     )
@@ -26,11 +25,11 @@ class Boards extends Component{
     return(
       <div>
         <form onSubmit={this.handleSubmit}>
-        <input onChange={this.changeHandler} type="text" placeholder="name" name="name"
-        value={this.state.name}></input>
-        <button>Make A New Board</button>
+          <input onChange={this.changeHandler} type="text" placeholder="name" name="name"
+          value={this.state.name}></input>
+          <button>Make A New Board</button>
         </form>
-        <BoardCard />
+        {this.props.data}
       </div>
     )
   }

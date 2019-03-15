@@ -2,11 +2,15 @@ import React, {Component} from 'react'
 
 class BoardCard extends Component{
 
+  handleClick=()=>{
+    console.log("hi");
+  }
+
   render(){
     return(
       <div>
-        I am a not big board
-        <button>Delete Me</button>
+        <h4>{this.props.name}</h4>
+        <button onClick={this.handleClick}>Delete Me</button>
       </div>
     )
   }
